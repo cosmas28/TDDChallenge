@@ -13,3 +13,8 @@ class PhoneBook:
             return False
 
         return True
+
+    def update_contact(self, name, phone):
+        self.contact_list[name] = phone
+        return self.contact_list.get(name)
+
