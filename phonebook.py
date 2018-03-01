@@ -14,3 +14,14 @@ class PhoneBook:
             return "Contact not added. Please try again!!"
 
         return self.contact_list[self._name]
+
+    def view_contact(self):
+        view_list = []
+        if len(self.contact_list) == 0:
+            return "The phone book is empty!"
+        else:
+            for key, value in self.contact_list.items():
+                view_list.append((key, value))
+
+        return view_list
+
