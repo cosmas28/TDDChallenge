@@ -11,6 +11,10 @@ class PhonebookTest(unittest.TestCase):
     def test_add_contact(self):
         self.assertTrue(self.phonebook.add_contact())
 
+    def test_delete_contact(self):
+        self.phonebook.add_contact()
+        self.assertTrue(self.phonebook.delete_contact('Cosmas'))
+
 
 if __name__ == '__main__':
     unittest.main()
