@@ -9,7 +9,7 @@ class PhonebookTest(unittest.TestCase):
         self.phonebook = PhoneBook('Cosmas', '0729536851')
 
     def test_add_contact(self):
-        self.assertTrue(self.phonebook.add_contact())
+        self.assertEqual(self.phonebook.add_contact(), '0729536851')
 
     def test_delete_contact(self):
         self.phonebook.add_contact()

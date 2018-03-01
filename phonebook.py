@@ -9,10 +9,10 @@ class PhoneBook:
 
     def add_contact(self):
         self.contact_list[self._name] = self.p_number
-        if self.contact_list.get(self._name) is None:
-            return False
+        if self._name not in self.contact_list:
+            return "Contact not added. Please try again!!"
 
-        return True
+        return self.contact_list[self._name]
 
     def delete_contact(self, name):
         if self.contact_list[name]:
