@@ -13,3 +13,13 @@ class PhoneBook:
             return False
 
         return True
+
+    def delete_contact(self, name):
+        if self.contact_list[name]:
+            del self.contact_list[name]
+        else:
+            raise KeyError
+
+        if name in self.contact_list:
+            return False
+        return True
